@@ -1,0 +1,391 @@
+
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h5>1. What product does Andrew initially look for? </h5>
+    <div id='block-11' style='padding: 5px;'>
+        <label for='option-11' style=' padding: 5px; font-size: .9em;'>
+            <input type='radio' name='option' id='option-11' onclick='displayAnswer1()'
+                style='margin-right: 10px;' />
+            A. A personal computer.</label>
+        <span id='result-11'></span>
+    </div>
+    <hr />
+
+    <div id='block-12' style='padding: 5px;'>
+        <label for='option-12' style=' padding: 5px; font-size: .9em;'>
+            <input type='radio' name='option' id='option-12' onclick='displayAnswer1()'
+                style='margin-right: 10px;' />
+            B. An external computer hard drive.</label>
+        <span id='result-12'></span>
+    </div>
+    <hr />
+
+    <div id='block-13' style='padding: 5px;'>
+        <label for='option-13' style=' padding: 5px; font-size: .9em;'>
+            <input type='radio' name='option' id='option-13' onclick='displayAnswer1()'
+                style='margin-right: 10px;' />
+            C. A pen drive.</label>
+        <span id='result-13'></span>
+    </div>
+    <hr />
+
+
+    <script type="text/javascript">
+        var correct_answers = 0;
+        function displayAnswer1() {
+            if (document.getElementById('option-12').checked) {
+                displayAnswer12(true)
+            }
+            if (document.getElementById('option-11').checked) {
+                document.getElementById('block-11').style.border = '3px red'
+                document.getElementById('result-11').style.color = 'red'
+                document.getElementById('result-11').innerHTML = '&#10060;'
+            }
+            if (document.getElementById('option-13').checked) {
+                document.getElementById('block-13').style.border = '3px red'
+                document.getElementById('result-13').style.color = 'red'
+                document.getElementById('result-13').innerHTML = '&#10060;'
+            }
+            displayAnswer12(false);
+        }
+
+
+        function displayAnswer12(x) {
+            document.getElementById('block-12').style.border = '3px solid green'
+            document.getElementById('result-12').style.color = 'green'
+            document.getElementById('result-12').innerHTML = '&#10004;'
+            if (x) {
+                document.getElementById('correct_answers').innerHTML = '';
+                document.getElementById('correct_answers').innerHTML += correct_answers += 1;
+            } else {
+                document.getElementById('option-12').disabled = true;                
+            }
+        }
+    </script>
+
+    <h5>2. What is the main feature of the external computer hard drive? </h5>
+    <div id='block-21' style='padding: 5px;'>
+        <label for='option-21' style=' padding: 5px; font-size: .9em;'>
+            <input type='radio' name='option' id='option-21' onclick='displayAnswer2()'
+                style='margin-right: 10px;' />
+            A. It weighs less than 200g.</label>
+        <span id='result-21'></span>
+    </div>
+    <hr />
+
+    <div id='block-22' style='padding: 5px;'>
+        <label for='option-22' style=' padding: 5px; font-size: .9em;'>
+            <input type='radio' name='option' id='option-22' onclick='displayAnswer2()'
+                style='margin-right: 10px;' />
+            B. It is bigger than a pen drive. </label>
+        <span id='result-22'></span>
+    </div>
+    <hr />
+
+    <div id='block-23' style='padding: 5px;'>
+        <label for='option-23' style=' padding: 5px; font-size: .9em;'>
+            <input type='radio' name='option' id='option-23' onclick='displayAnswer2()'
+                style='margin-right: 10px;' />
+            C. It has a large capacity. </label>
+        <span id='result-23'></span>
+    </div>
+    <hr />
+
+
+    <script>
+        function displayAnswer2() {
+            if (document.getElementById('option-23').checked) {
+                displayAnswer23(true)
+            }
+            if (document.getElementById('option-21').checked) {
+                document.getElementById('block-21').style.border = '3px red'
+                document.getElementById('result-21').style.color = 'red'
+                document.getElementById('result-21').innerHTML = '&#10060;'
+            }
+            if (document.getElementById('option-22').checked) {
+                document.getElementById('block-22').style.border = '3px red'
+                document.getElementById('result-22').style.color = 'red'
+                document.getElementById('result-22').innerHTML = '&#10060;'
+            }
+            displayAnswer23(false);
+        }
+
+
+        function displayAnswer23(x) {
+            document.getElementById('block-23').style.border = '3px solid green'
+            document.getElementById('result-23').style.color = 'green'
+            document.getElementById('result-23').innerHTML = '&#10004;'
+            if (x) {
+                document.getElementById('correct_answers').innerHTML = '';
+                document.getElementById('correct_answers').innerHTML += correct_answers += 1;
+            } else {
+                document.getElementById('option-23').disabled = true;                
+            }
+        }
+    </script>
+
+   <h5>3. Choose the correct sentence. </h5>
+    <div id='block-31' style='padding: 5px;'>
+        <label for='option-31' style=' padding: 5px; font-size: .9em;'>
+            <input type='radio' name='option' id='option-31' onclick='displayAnswer3()'
+                style='margin-right: 10px;' />
+            A. The external hard drive and the pen drive have the same function. </label>
+        <span id='result-31'></span>
+    </div>
+    <hr />
+
+    <div id='block-32' style='padding: 5px;'>
+        <label for='option-32' style=' padding: 5px; font-size: .9em;'>
+            <input type='radio' name='option' id='option-32' onclick='displayAnswer3()'
+                style='margin-right: 10px;' />
+            B. The pen drive is made of plastic and metal. </label>
+        <span id='result-32'></span>
+    </div>
+    <hr />
+
+    <div id='block-33' style='padding: 5px;'>
+        <label for='option-33' style=' padding: 5px; font-size: .9em;'>
+            <input type='radio' name='option' id='option-33' onclick='displayAnswer3()'
+                style='margin-right: 10px;' />
+            C. Andrew thinks the external hard drive is affordable. </label>
+        <span id='result-33'></span>
+    </div>
+    <hr />
+
+
+    <script>
+        function displayAnswer3() {
+            if (document.getElementById('option-31').checked) {
+                displayAnswer31(true)
+            }
+            if (document.getElementById('option-32').checked) {
+                document.getElementById('block-32').style.border = '3px red'
+                document.getElementById('result-32').style.color = 'red'
+                document.getElementById('result-32').innerHTML = '&#10060;'
+            }
+            if (document.getElementById('option-33').checked) {
+                document.getElementById('block-33').style.border = '3px red'
+                document.getElementById('result-33').style.color = 'red'
+                document.getElementById('result-33').innerHTML = '&#10060;'
+            }
+            displayAnswer31(false);
+        }
+
+
+        function displayAnswer31(x) {
+            document.getElementById('block-31').style.border = '3px solid green'
+            document.getElementById('result-31').style.color = 'green'
+            document.getElementById('result-31').innerHTML = '&#10004;'
+            if (x) {
+                document.getElementById('correct_answers').innerHTML = '';
+                document.getElementById('correct_answers').innerHTML += correct_answers += 1;
+            } else {
+                document.getElementById('option-31').disabled = true;                
+            }
+        }
+    </script>
+
+
+
+   <h5>4. The dimensions, material, and price are the characteristics of the external hard drive. </h5>
+    <div id='block-41' style='padding: 5px;'>
+        <label for='option-41' style=' padding: 5px; font-size: .9em;'>
+            <input type='radio' name='option' id='option-41' onclick='displayAnswer4()'
+                style='margin-right: 10px;' />
+            A. Yes. </label>
+        <span id='result-41'></span>
+    </div>
+    <hr />
+
+    <div id='block-42' style='padding: 5px;'>
+        <label for='option-42' style=' padding: 5px; font-size: .9em;'>
+            <input type='radio' name='option' id='option-42' onclick='displayAnswer4()'
+                style='margin-right: 10px;' />
+            B. No. </label>
+        <span id='result-42'></span>
+    </div>
+    <hr />
+
+    <div id='block-43' style='padding: 5px;'>
+        <label for='option-43' style=' padding: 5px; font-size: .9em;'>
+            <input type='radio' name='option' id='option-43' onclick='displayAnswer4()'
+                style='margin-right: 10px;' />
+            C. Not sure. </label>
+        <span id='result-43'></span>
+    </div>
+    <hr />
+
+
+    <script>
+        function displayAnswer4() {
+            if (document.getElementById('option-41').checked) {
+                displayAnswer41(true)
+            }
+            if (document.getElementById('option-42').checked) {
+                document.getElementById('block-42').style.border = '3px red'
+                document.getElementById('result-42').style.color = 'red'
+                document.getElementById('result-42').innerHTML = '&#10060;'
+            }
+            if (document.getElementById('option-43').checked) {
+                document.getElementById('block-43').style.border = '3px red'
+                document.getElementById('result-43').style.color = 'red'
+                document.getElementById('result-43').innerHTML = '&#10060;'
+            }
+            displayAnswer41(false);
+        }
+
+
+        function displayAnswer41(x) {
+            document.getElementById('block-41').style.border = '3px solid green'
+            document.getElementById('result-41').style.color = 'green'
+            document.getElementById('result-41').innerHTML = '&#10004;'
+            if (x) {
+                document.getElementById('correct_answers').innerHTML = '';
+                document.getElementById('correct_answers').innerHTML += correct_answers += 1;
+            } else {
+                document.getElementById('option-41').disabled = true;                
+            }
+        }
+    </script>
+
+
+   <h5>5. After asking many questions, did Andrew purchase the external hard drive? </h5>
+    <div id='block-51' style='padding: 5px;'>
+        <label for='option-51' style=' padding: 5px; font-size: .9em;'>
+            <input type='radio' name='option' id='option-51' onclick='displayAnswer5()'
+                style='margin-right: 10px;' />
+            A. Yes. </label>
+        <span id='result-51'></span>
+    </div>
+    <hr />
+
+    <div id='block-52' style='padding: 5px;'>
+        <label for='option-52' style=' padding: 5px; font-size: .9em;'>
+            <input type='radio' name='option' id='option-52' onclick='displayAnswer5()'
+                style='margin-right: 10px;' />
+            B. No. </label>
+        <span id='result-52'></span>
+    </div>
+    <hr />
+
+    <div id='block-53' style='padding: 5px;'>
+        <label for='option-53' style=' padding: 5px; font-size: .9em;'>
+            <input type='radio' name='option' id='option-53' onclick='displayAnswer5()'
+                style='margin-right: 10px;' />
+            C. Not sure. </label>
+        <span id='result-53'></span>
+    </div>
+    <hr />
+
+
+    <script>
+        function displayAnswer5() {
+            if (document.getElementById('option-52').checked) {
+                displayAnswer52(true)
+            }
+            if (document.getElementById('option-51').checked) {
+                document.getElementById('block-51').style.border = '3px red'
+                document.getElementById('result-51').style.color = 'red'
+                document.getElementById('result-51').innerHTML = '&#10060;'
+            }
+            if (document.getElementById('option-53').checked) {
+                document.getElementById('block-53').style.border = '3px red'
+                document.getElementById('result-53').style.color = 'red'
+                document.getElementById('result-53').innerHTML = '&#10060;'
+            }
+            displayAnswer52(false);
+        }
+
+
+        function displayAnswer52(x) {
+            document.getElementById('block-52').style.border = '3px solid green'
+            document.getElementById('result-52').style.color = 'green'
+            document.getElementById('result-52').innerHTML = '&#10004;'
+            if (x) {
+                document.getElementById('correct_answers').innerHTML = '';
+                document.getElementById('correct_answers').innerHTML += correct_answers += 1;
+            } else {
+                document.getElementById('option-52').disabled = true;                
+            }
+        }
+    </script>
+
+
+
+   <h5>6. A pen drive ______ a ______ capacity than a hard drive. </h5>
+    <div id='block-61' style='padding: 5px;'>
+        <label for='option-61' style=' padding: 5px; font-size: .9em;'>
+            <input type='radio' name='option' id='option-61' onclick='displayAnswer6()'
+                style='margin-right: 10px;' />
+            A. hold; small.</label>
+        <span id='result-61'></span>
+    </div>
+    <hr />
+
+    <div id='block-62' style='padding: 5px;'>
+        <label for='option-62' style=' padding: 5px; font-size: .9em;'>
+            <input type='radio' name='option' id='option-62' onclick='displayAnswer6()'
+                style='margin-right: 10px;' />
+            B. holds; smaller </label>
+        <span id='result-62'></span>
+    </div>
+    <hr />
+
+    <div id='block-63' style='padding: 5px;'>
+        <label for='option-63' style=' padding: 5px; font-size: .9em;'>
+            <input type='radio' name='option' id='option-63' onclick='displayAnswer6()'
+                style='margin-right: 10px;' />
+            C. holding; smallest</label>
+        <span id='result-63'></span>
+    </div>
+    <hr />
+
+
+    <script>
+        function displayAnswer6() {
+            if (document.getElementById('option-62').checked) {
+                displayAnswer62(true)
+            }
+            if (document.getElementById('option-61').checked) {
+                document.getElementById('block-61').style.border = '3px red'
+                document.getElementById('result-61').style.color = 'red'
+                document.getElementById('result-61').innerHTML = '&#10060;'
+            }
+            if (document.getElementById('option-63').checked) {
+                document.getElementById('block-63').style.border = '3px red'
+                document.getElementById('result-63').style.color = 'red'
+                document.getElementById('result-63').innerHTML = '&#10060;'
+            }
+            displayAnswer62(false);
+        }
+
+
+        function displayAnswer62(x) {
+            document.getElementById('block-62').style.border = '3px solid green'
+            document.getElementById('result-62').style.color = 'green'
+            document.getElementById('result-62').innerHTML = '&#10004;'
+            if (x) {
+                document.getElementById('correct_answers').innerHTML = '';
+                document.getElementById('correct_answers').innerHTML += correct_answers += 1;
+            } else {
+                document.getElementById('option-62').disabled = true;                
+            }
+        }
+    </script>
+
+    
+	<h5>Score:</h5>
+    <p id="correct_answers"></p>
+</body>
+</html>
+
+<style>
+body {
+    font-family: sans-serif;
+    font-size: 20px;
+    padding: 1rem;
+    background-color: #C3E6E3;
+}
+</style>
