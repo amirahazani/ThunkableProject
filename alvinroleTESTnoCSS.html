@@ -2,7 +2,7 @@
 <html>
   <body>
     <div id="controls">
-  	 <button id="recordButton">Record</button>
+  	 <button id="recordButton" onclick="audio.play();">Record</button>
   	 <button id="stopButton" disabled>Stop</button>
     </div>
     <div id="formats"></div>
@@ -448,7 +448,6 @@ function startRecording() {
 
 		//start the recording process
 		rec.record()
-		audio.play();
 
 		console.log("Recording started");
 
