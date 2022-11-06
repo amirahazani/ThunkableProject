@@ -401,7 +401,7 @@ stopButton.addEventListener("click", stopRecording);
 
 function startRecording() {
 
-    audio.play();
+    
 	console.log("recordButton clicked");
 
 	/*
@@ -448,6 +448,7 @@ function startRecording() {
 
 		//start the recording process
 		rec.record()
+		audio.play();
 
 		console.log("Recording started");
 
@@ -456,6 +457,7 @@ function startRecording() {
     	recordButton.disabled = false;
     	stopButton.disabled = true;
 	});
+	
 }
 
 function stopRecording() {
