@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<head>
+    <title>test</title>
+</head>
+<body>
+    <button id = "button2" style = "color: white; background: #457D58;font-size: 15px;" type = "button">الملايوية</button>
+    <img id = "colorImage" class = "image" src = "https://drive.google.com/uc?export=download&id=1-YJ7NXL1GR-Qh3u7hY6XQIq4qaZgwTfD" width="80%" height="auto" onclick="play('audio1');"></button>
+    <script src="app.js" type="text/javascript"></script>
+
+<audio id="audio1" src="https://drive.google.com/uc?export=download&id=1walHB0qAlDnuoTMKFh-KHi5Db7tqM-EX" ></audio>
+
+</body>
+</html>
+
+<script>
+
+var currentPlayer;
+function play(element) {
+
+var audio=document.getElementById(element);
+if(currentPlayer  && currentPlayer != audio) {
+      currentPlayer.pause(); 
+ }
+if (audio.paused)
+            audio.play();
+    else
+        audio.pause();
+        audio.currentTime = 0;
+         currentPlayer = audio;
+}
+
+let colorImage = document.getElementById("colorImage");
+let button2 = document.getElementById("button2");
+
+
+function changeToBW() {
+
+    if (colorImage.getAttribute('src') === "https://drive.google.com/uc?export=download&id=1-YJ7NXL1GR-Qh3u7hY6XQIq4qaZgwTfD") {
+        colorImage.setAttribute('src', "https://drive.google.com/uc?export=download&id=1-oP2LnoLgRBCVG419nKFG1LVfkl0qGZL");
+    }
+    else {
+        colorImage.setAttribute('src', "https://drive.google.com/uc?export=download&id=1-YJ7NXL1GR-Qh3u7hY6XQIq4qaZgwTfD");
+    }
+}
+
+button2.addEventListener("click", changeToBW);
+</script>
+
+<style>
+button, img{
+  display: inline-block;
+  vertical-align: middle;
+  margin: 10px 0;
+}
+</style>
