@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<body>
+    <input type="image" src="https://drive.google.com/uc?export=download&id=1Kxk_WW-amM8mwVBT5jfXSeNgGDBeM1aA" id = "button1" width="8%" height="auto" type = "button" </button>
+    <img id = "img1" class = "image" src = "https://drive.google.com/uc?export=download&id=1-YJ7NXL1GR-Qh3u7hY6XQIq4qaZgwTfD" width="80%" height="auto" onclick="play('audio1');"></button>
+    
+    <br>
+    
+    <input type="image" src="https://drive.google.com/uc?export=download&id=1Kxk_WW-amM8mwVBT5jfXSeNgGDBeM1aA" id = "button2" width="8%" height="auto" type = "button" </button>
+    <img id = "img2" class = "image" src = "https://drive.google.com/uc?export=download&id=1-oP2LnoLgRBCVG419nKFG1LVfkl0qGZL" width="80%" height="auto" onclick="play('audio2');"></button>
+    <script src="app.js" type="text/javascript"></script>
+
+<audio id="audio1" src="https://drive.google.com/uc?export=download&id=1walHB0qAlDnuoTMKFh-KHi5Db7tqM-EX" ></audio>
+<audio id="audio2" src="https://drive.google.com/uc?export=download&id=1TebBy_inDMhy10egjz5-eM0odqlVtnLQ" ></audio>
+
+</body>
+</html>
+
+<script>
+
+var currentPlayer;
+function play(element) {
+
+var audio=document.getElementById(element);
+if(currentPlayer  && currentPlayer != audio) {
+      currentPlayer.pause(); 
+ }
+if (audio.paused)
+            audio.play();
+    else
+        audio.pause();
+        audio.currentTime = 0;
+         currentPlayer = audio;
+}
+
+let button1 = document.getElementById("button1");
+var img1= "https://drive.google.com/uc?export=download&id=1-YJ7NXL1GR-Qh3u7hY6XQIq4qaZgwTfD"
+var img1T= "https://drive.google.com/uc?export=download&id=1-oP2LnoLgRBCVG419nKFG1LVfkl0qGZL"
+let imgConvo1 = document.getElementById("img1");
+
+let button2 = document.getElementById("button2");
+var img2= "https://drive.google.com/uc?export=download&id=1-YJ7NXL1GR-Qh3u7hY6XQIq4qaZgwTfD"
+var img2T= "https://drive.google.com/uc?export=download&id=1-oP2LnoLgRBCVG419nKFG1LVfkl0qGZL"
+let imgConvo2 = document.getElementById("img2");
+
+
+
+
+
+function imgTranslate1() {
+
+    if (imgConvo1.getAttribute('src') === img1) {
+        imgConvo1.setAttribute('src', img1T);
+    }
+    else {
+        imgConvo1.setAttribute('src', img1);
+    }
+}
+
+function imgTranslate2() {
+
+    if (imgConvo2.getAttribute('src') === img2) {
+        imgConvo2.setAttribute('src', img2T);
+    }
+    else {
+        imgConvo2.setAttribute('src', img2);
+    }
+}
+
+
+button1.addEventListener("click", imgTranslate1);
+button2.addEventListener("click", imgTranslate2);
+</script>
+
+<style>
+button, img{
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0px 0;
+}
+</style>
